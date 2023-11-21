@@ -18,3 +18,22 @@ images.forEach((image) => {
         });
     });
 })
+
+document.getElementById('uploadInput').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    const uploadedImage = document.getElementById('uploadedImage');
+  
+    if (file) {
+      const reader = new FileReader();
+  
+      reader.onload = function(e) {
+        uploadedImage.style.display = 'block';
+        uploadedImage.setAttribute('src', e.target.result);
+      }
+  
+      reader.readAsDataURL(file);
+    } else {
+      uploadedImage.style.display = 'none';
+      uploadedImage.setAttribute('src', '#');
+    }
+  });
