@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The To-Do</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css"
+    />
+</head>
+<body id="body">
+    <header>
+        <h1>TO-DOS</h1>
+        <span>Enter text into the input field to add items to your list.</span>
+    </header>
+
+    <div>
+        <p>Click the item to mark it as complete.</p>
+        <p>Click the "X" to remove the item from your list.</p>
+    </div>
+
+        <form action="" id="my-form">
+            <div class="message" id="error"></div>
+          <div class="todo">
+            <input type="text" id="item" placeholder="Enter an item..."/>
+            <button class="button"><i class="fa-solid fa-pencil"></i></button>
+          </div>
+        </form>
+  
+        <ul id="users"></ul>
+  
+        <ul class="items">
+          <!--
+          <li class="item">Item 1</li>
+          <input class="button" type="submit" value="X" action="" />
+          <li class="item">Item 2</li>
+          <li class="item">Item 3</li>
+          -->
+        </ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
