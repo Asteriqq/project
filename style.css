@@ -115,6 +115,10 @@ a{
     display: none;
   }
 
+  input :hover{
+    cursor: pointer;
+  }
+
 @media (max-width: 477px){
 
     img {
