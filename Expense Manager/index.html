@@ -4,6 +4,169 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense Manager</title>
+    <link rel="stylesheet" href="style.css">
   </head>
-  <body></body>
+  <body>
+
+  <div class="sidebar">
+    <div class="logo"></div>
+    <ul class="menu">
+      <li class="active">
+        <a href="#">
+          <i></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i></i>
+          <span>Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i></i>
+          <span>FAQ</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i></i>
+          <span>Settings</span>
+        </a>
+      </li>
+      <li class="logout">
+        <a href="loginpage.html">
+          <i></i>
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main--content">
+    <div class="header--wrapper">
+      <div class="header--title">
+        <span>Expense Manager</span>
+        <h2>Home</h2>
+      </div>
+      <div class="user--info">
+        <img src="0b187e9bc6ea4d1a9186601efb6d25b8.jpg" alt="">
+        <span class="main--title">New User</span>
+      </div>
+    </div>
+
+    <div id="container">
+      <h3 class="main--title">Add Expense</h3>
+
+      <div id="add-expense">
+        <input type="date" id="dateInput">
+        <input type="text" id="merchantInput" placeholder="Enter Merchant">
+        <select id="type">
+          <option disabled selected value="">Please Select an Option</option>
+          <option value="fastFood">Fast Food</option>
+          <option value="Breakfast">Breakfast</option>
+          <option value="Lunch">Lunch</option>
+          <option value="Ride">Ride</option>
+          <option value="Outings">Outings</option>
+          <option value="officeSupplies">Office Supplies</option>
+          <option value="Diesel">Diesel</option>
+          <option value="Electricity">Electricity</option>
+          <option value="Airline">Airline</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Miscellaneous">Miscellaneous</option>
+        </select>
+        <input type="number" placeholder="Amount" id="amountInput">
+        <input type="text" placeholder="Description" id="descriptionInput">
+        <select id="status">
+          <option disabled selected value="">Please Select an Option</option>
+          <option value="pending"></option>
+          <option value="Accepted"></option>
+          <option value="Declined"></option>
+        </select>
+        <select id="Frequency">
+          <option disabled selected value="">Please Select an Option</option>
+          <option value="Daily"></option>
+          <option value="Weekly"></option>
+          <option value="Monthly"></option>
+          <option value="Yearly"></option>
+        </select>
+        <button id="button">Add Expense</button>
+      </div>
+    </div>
+
+    <div class="tabular--wrapper">
+      <h3 class="main--title">Expenses Data</h3>
+      <div id="table-container">
+        <table id="table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Merchant</th>
+              <th>Type</th>
+              <th>Amount</th>
+              <th>Decription</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                2023-05-01
+              </td>
+              <td>Dana Air</td>
+              <td>Airline</td>
+              <td>#5000</td>
+              <td>Flight to Abuja</td>
+              <td>Pending</td>
+              <td><button>delete</button></td>
+            </tr>
+
+            <tr>
+              <td>
+                2023-05-01
+              </td>
+              <td>Dana Air</td>
+              <td>Airline</td>
+              <td>#5000</td>
+              <td>Flight to Abuja</td>
+              <td>Pending</td>
+              <td><button>delete</button></td>
+            </tr>
+
+            <tr>
+              <td>
+                2023-05-01
+              </td>
+              <td>Dana Air</td>
+              <td>Airline</td>
+              <td>#5000</td>
+              <td>Flight to Abuja</td>
+              <td>Pending</td>
+              <td><button>delete</button></td>
+            </tr>
+
+            <tr>
+              <td>
+                2023-05-01
+              </td>
+              <td>Dana Air</td>
+              <td>Airline</td>
+              <td>#5000</td>
+              <td>Flight to Abuja</td>
+              <td>Pending</td>
+              <td><button>delete</button></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="7">Total: #20,000</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+  </body>
 </html>
