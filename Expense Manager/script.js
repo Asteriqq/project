@@ -59,3 +59,7 @@ if (closingButton){
         blurryBackground.style.display = 'none'
     })
 }
+
+/**Adding Expenses **/
+
+let button = document.getElementById('button')
