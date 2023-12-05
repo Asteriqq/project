@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *{
-    font-family: 'Konkhmer Sleokcher', cursive;
+    font-family: 'Spartan', sans-serif;
     margin: 0;
     padding: 0;
     border: none;
@@ -15,6 +15,7 @@ body{
 
 /**header**/
 .main--content{
+    margin-top: 0;
     position: relative;
     background: #ebe9e9;
     width: 100%;
@@ -40,7 +41,7 @@ body{
 }
 
 .header--title{
-    color: rgb(0, 32, 100);
+    color: rgb(63, 151, 233);
 }
 
 .user--info{
@@ -50,13 +51,37 @@ body{
 }
 
 /**Add Expense**/
-#container{
+.floating-form{
     background: whitesmoke;
-    display: flex;
-    position: relative;
-    padding: 10px;
+    display: none;
+    top: 50px;
+    right: 50px;
+    position: fixed;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5ps rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    justify-content: center;
+}
+
+.add{
+    bottom: 0;
+    left: 5;
+    margin-top: 20px;
+    position: relative;
+    }
+
+#toggleFormButton,
+#closeButton,
+#closingButton{
+    border-radius: 35px;
+    height: 70px;
+    width: 70px;
+}
+
+#toggleFormButton i,
+#closeButton i,
+#closingButton i{
+    font-size: 40px;
 }
 
 #add-expense{
@@ -69,9 +94,13 @@ body{
 }
 
 .main--title{
-    color: rgb(0, 32, 100);
+    color: rgb(63, 151, 233);
     padding-bottom: 10px;
     font-size: 15px;
+}
+
+a{
+    text-decoration: none;
 }
 
 input, select{
@@ -93,7 +122,7 @@ button{
     height: 30px;
     cursor: pointer;
     color: white;
-    background-color: rgb(0, 32, 100);
+    background-color: rgb(63, 151, 233);
     border-radius: 10px;
 }
 
@@ -147,7 +176,7 @@ td{
 }
 
 thead{
-    background: rgb(0, 32, 100);
+    background: rgb(63, 151, 233);
 }
 
 th{
@@ -157,7 +186,7 @@ th{
 }
 
 tfoot{
-    background: rgb(0, 32, 100);
+    background: rgb(63, 151, 233);
     font-weight: bold;
     color: #fff;
 }
@@ -185,17 +214,18 @@ tfoot td{
     bottom: 0;
     width: 57px;
     height: 100vh;
-    padding: 0 0.7rem;
+    padding: 3rem 0.7rem;
     color: #fff;
     overflow: hidden;
     transition: all 0.5s linear;
-    background: rgb(0, 32, 100);
+    background: rgb(63, 151, 233);
+    margin-top: 0;
 }
 
 .sidebar:hover{
     width: 240px;
     transition: 0.5s;
-    padding: 0 1.7rem;
+    padding: 3 1.7rem;
 }
 
 .logo{
@@ -248,51 +278,186 @@ tfoot td{
 
 /**Log In**/
 .login-page{
-    background: black;
+    background: rgb(63, 151, 233);
     margin-top: 15%;
     margin-bottom: 15%;
 }
 
 .login-box{
     justify-content: center;
-    padding-bottom: 2em;
+    padding: 0.3em 0;
     color: #fff;
     display: block;
-    border: 1px solid ;
     border-radius: 5px;
+    margin: 20px;
 }
 
 .login-container{
     border-radius: 10px;
+    background: white;
+    color: white;
     margin-left: 40%;
     margin-right: 40%;
     text-align: center;
     font-size: 20px;
     border-collapse: collapse;
     margin: auto;
+    border: 3px solid ;
+    width: 300px;
 }
 
-.login-box label,
-input{
+.login-container:hover{
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.login-box label{
     width: 100%;
+    color: black;
 }
 
-.login-box label,
-input,
-div{
+.login-box input{
     margin-top: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+    background: rgb(225, 217, 217);
+}
+
+.end p{
+    font-size: 10px;
+    color: black;;
 }
 
 .login-box button{
-    height: 20px;
-    background: #fff;
-    width: 20%;
+    height: 30px;
+    background: rgb(63, 151, 233);
+    width: 100%;
     border-radius: 5px;
     margin-top: 10px;
     color: black;
 }
 
 .login-head{
+    color: black;
+    margin: 10px;
+}
+
+.end{
+    width: 100%;
+    justify-content: center;
+    height: 35px;
+    background: rgb(182, 178, 178);
+    border-collapse: collapse;
+    border: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.signin i{
+    font-size: 40px;
+}
+
+.signin{
+    width: 100px;
+    background: rgb(63, 151, 233);
+    height: 100px;
+    border-radius: 50px;
+}
+
+/**Employee Details**/
+.employeeData img{
+    width: 250px;
+    height: 250px;
+    border: 7px solid lightblue;
+    border-radius: 125px;
+    margin: 20px 85px;
+}
+
+.employeeDetails{
+    display: block;
+    margin: 0 50px 0 80px;
+    padding: 5px;
+}
+
+.employee{
+    margin: 0 35px;
+    text-align: center;
+}
+
+.employeeDetails span{
+    background: lightblue;
+    width: 30px;
+    border: 1px solid lightblue;
     border-radius: 5px;
-    color: #fff;
+}
+
+.employeeDetails h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.employeeDetails p{
+    font-size: 15px;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+.profilepage{
+    background: rgb(63, 151, 233);
+}
+
+.company{
+    margin: 5px 95px;
+    font-weight: 1000;
+    font-size: 20px;
+}
+
+.floating-profile{
+    background: whitesmoke;
+    display: none;
+    top: 50px;
+    right: 50px;
+    position: fixed;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5ps rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.floating-profile,
+.floating-form{
+    backdrop-filter: none;
+    z-index: 100;
+}
+
+#toggleProfileButton,
+#toggleFormButton{
+    cursor: pointer;
+    backdrop-filter: none;
+    z-index: 100;
+}
+
+.blur-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 99;
+    display: none;
+}
+
+#closeButton{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 101;
+}
+
+#closingButton{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 101;
 }
