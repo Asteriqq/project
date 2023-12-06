@@ -108,18 +108,18 @@
           </select>
           <input type="number" placeholder="Amount" id="amountInput">
           <input type="text" placeholder="Description" id="descriptionInput">
-          <select id="status">
+          <select id="state">
             <option disabled selected value="">Please Select an Option</option>
-            <option value="pending"></option>
-            <option value="Accepted"></option>
-            <option value="Declined"></option>
+            <option value="pending">Pending</option>
+            <option value="accepted">Accepted</option>
+            <option value="declined">Declined</option>
           </select>
-          <select id="Frequency">
+          <select id="frequency">
             <option disabled selected value="">Please Select an Option</option>
-            <option value="Daily"></option>
-            <option value="Weekly"></option>
-            <option value="Monthly"></option>
-            <option value="Yearly"></option>
+            <option value="Daily">Daily</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+            <option value="Yearly">Yearly</option>
           </select>
           <button id="button">Add Expense</button>
         </div>
@@ -130,76 +130,23 @@
       <h3 class="main--title">Expenses Data</h3>
       <div id="table-container">
         <table id="table">
-          <thead>
             <tr>
               <th>Date</th>
               <th>Merchant</th>
               <th>Type</th>
               <th>Amount</th>
               <th>Decription</th>
-              <th>Status</th>
+              <th>State</th>
               <th>Frequency</th>
               <th>Action</th>
             </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                2023-05-01
-              </td>
-              <td>Dana Air</td>
-              <td>Airline</td>
-              <td>#5000</td>
-              <td>Flight to Abuja</td>
-              <td>Pending</td>
-              <td>Daily</td>
-              <td><button>delete</button></td>
-            </tr>
-
-            <tr>
-              <td>
-                2023-05-01
-              </td>
-              <td>Dana Air</td>
-              <td>Airline</td>
-              <td>#5000</td>
-              <td>Flight to Abuja</td>
-              <td>Pending</td>
-              <td>Daily</td>
-              <td><button>delete</button></td>
-            </tr>
-
-            <tr>
-              <td>
-                2023-05-01
-              </td>
-              <td>Dana Air</td>
-              <td>Airline</td>
-              <td>#5000</td>
-              <td>Flight to Abuja</td>
-              <td>Pending</td>
-              <td>Daily</td>
-              <td><button>delete</button></td>
-            </tr>
-
-            <tr>
-              <td>
-                2023-05-01
-              </td>
-              <td>Dana Air</td>
-              <td>Airline</td>
-              <td>#5000</td>
-              <td>Flight to Abuja</td>
-              <td>Pending</td>
-              <td>Daily</td>
-              <td><button>delete</button></td>
-            </tr>
-          </tbody>
+            <!--
           <tfoot>
             <tr>
               <td colspan="8">Total: #20,000</td>
             </tr>
           </tfoot>
+        -->
         </table>
       </div>
     </div>

@@ -68,7 +68,7 @@ body{
     left: 5;
     margin-top: 20px;
     position: relative;
-    }
+    } 
 
 #toggleFormButton,
 #closeButton,
@@ -136,8 +136,9 @@ button{
 }
 
 #table-container{
-    width: 100%;
+    width: 800px;
     background: rgb(240, 240, 240);
+    height: 225px;
     overflow: auto;
     overflow-x: auto;
     display: flex;
@@ -146,8 +147,10 @@ button{
     border-radius: 10px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
     top: 60%;
-    left: 60%;
-}
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+} 
 
 table{
     width: inherit;
@@ -162,10 +165,6 @@ tr:nth-child(even){
     background: #fff;
 }
 
-tbody{
-    background: #f2f2f2;
-}
-
 td{
     text-align: center;
     color: #333;
@@ -175,17 +174,14 @@ td{
     padding: 15px;
 }
 
-thead{
-    background: rgb(63, 151, 233);
-}
-
 th{
+    background: rgb(63, 151, 233);
     color:white;
     text-align: center;
     height: 60px;
 }
 
-tfoot{
+/**tfoot{
     background: rgb(63, 151, 233);
     font-weight: bold;
     color: #fff;
@@ -195,6 +191,7 @@ tfoot td{
     padding: 15px;
     color: #fff;
 }
+**/
 
 ::placeholder, input{
     text-align: center;
