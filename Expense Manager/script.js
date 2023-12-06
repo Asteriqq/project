@@ -55,6 +55,8 @@ let blurryBackground = document.querySelector('.blur-background')
 
 if (closingButton){
     closingButton.addEventListener('click', () =>{
+        closingButton.preventDefault()
+    
         floatingForm.style.display = 'none'
         blurryBackground.style.display = 'none'
     })

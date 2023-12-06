@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css"
+    />
+  </head>
+  <body>
+
+  <div class="sidebar">
+    <div class="logo"></div>
+    <ul class="menu">
+      <li class="active">
+        <a href="#">
+          <i class="fa-solid fa-gauge"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <button id="toggleProfileButton"><i class="fa-regular fa-user"></i></button>
+          <span>Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-regular fa-circle-question"></i>
+          <span>FAQ</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </a>
+      </li>
+      <li class="logout">
+        <a href="loginpage.html">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main--content">
+    <div class="header--wrapper">
+      <div class="header--title">
+        <span>Expense Manager</span>
+        <h2>Home</h2>
+      </div>
+      <div class="user--info">
+        <img src="0b187e9bc6ea4d1a9186601efb6d25b8.jpg" alt="">
+        <span>New User</span>
+      </div>
+    </div>
+
+    <div class="blur-background"></div>
+
+    <div id="floatingProfile" class="floating-profile">
+      <div class="employeeData">
+        <p class="company">NUBIAVILLE LIMITED</p>
+        <button id="closeButton"><i class="fa-solid fa-circle-xmark"></i></button>
+        <img src="0b187e9bc6ea4d1a9186601efb6d25b8.jpg" alt="">
+        <div class="employeeDetails">
+            <div class="employee">
+                <h2>NEW USER</h2>
+                <span>Employee</span>
+                <p>FRONT-END DEVELOPER</p>
+                <p>SOFTWARE DEVELOPMENT</p>
+            </div>
+            <div>
+                <p>ID No: 123456ED</p>
+                <p>Email: newuser56467@gmail.com</p>
+                <p>Phone: +234 811 536 2134</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="blur-background"></div>
+
+    <div id="floatingForm" class="floating-form">
+      <form action="">
+        <button id="closingButton"><i class="fa-solid fa-circle-xmark"></i></button>
+        <h3 class="main--title">Add Expense</h3>
+        <div id="add-expense">
+          <input type="date" id="dateInput">
+          <input type="text" id="merchantInput" placeholder="Enter Merchant">
+          <select id="type">
+            <option disabled selected value="">Please Select an Option</option>
+            <option value="fastFood">Fast Food</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Ride">Ride</option>
+            <option value="Outings">Outings</option>
+            <option value="officeSupplies">Office Supplies</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Electricity">Electricity</option>
+            <option value="Airline">Airline</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Miscellaneous">Miscellaneous</option>
+          </select>
+          <input type="number" placeholder="Amount" id="amountInput">
+          <input type="text" placeholder="Description" id="descriptionInput">
+          <select id="state">
+            <option disabled selected value="">Please Select an Option</option>
+            <option value="pending">Pending</option>
+            <option value="accepted">Accepted</option>
+            <option value="declined">Declined</option>
+          </select>
+          <select id="frequency">
+            <option disabled selected value="">Please Select an Option</option>
+            <option value="Daily">Daily</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+            <option value="Yearly">Yearly</option>
+          </select>
+          <button id="button">Add Expense</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="tabular--wrapper">
+      <h3 class="main--title">Expenses Data</h3>
+      <div id="table-container">
+        <table id="table">
+            <tr>
+              <th>Date</th>
+              <th>Merchant</th>
+              <th>Type</th>
+              <th>Amount</th>
+              <th>Decription</th>
+              <th>State</th>
+              <th>Frequency</th>
+              <th>Action</th>
+            </tr>
+            <!--
+          <tfoot>
+            <tr>
+              <td colspan="8">Total: #20,000</td>
+            </tr>
+          </tfoot>
+        -->
+        </table>
+      </div>
+    </div>
+    
+    <div class="add">
+      <button id="toggleFormButton"><i class="fa-solid fa-circle-plus"></i></button>
+    </div>
+  
+  </div>
+  <script src="script.js"></script>
+  </body>
+</html>
