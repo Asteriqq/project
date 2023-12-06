@@ -427,7 +427,10 @@ tfoot td{
     z-index: 100;
 }
 
-#toggleProfileButton,
+#toggleProfileButton{
+    cursor: pointer;
+}
+
 #toggleFormButton{
     cursor: pointer;
     backdrop-filter: none;
