@@ -144,3 +144,56 @@ function updateLocalStorage(){
 }
 
 button.addEventListener('click', add_expense)
+
+/**
+<!-- Add input fields for filtering -->
+<input type="text" id="dateFilter" placeholder="Filter by Date">
+<input type="text" id="merchantFilter" placeholder="Filter by Merchant">
+<!-- Add similar input fields for other columns -->
+
+<!-- Your existing table -->
+<table id="table">
+    <!-- table headers and rows -->
+</table>
+
+<script>
+    // Get reference to the input fields
+    const dateFilter = document.getElementById('dateFilter');
+    const merchantFilter = document.getElementById('merchantFilter');
+    // Add references for other input fields similarly
+
+    // Add event listeners to input fields
+    dateFilter.addEventListener('input', filterTable);
+    merchantFilter.addEventListener('input', filterTable);
+    // Add event listeners for other input fields similarly
+
+    function filterTable() {
+        const filterValueDate = dateFilter.value.toUpperCase();
+        const filterValueMerchant = merchantFilter.value.toUpperCase();
+        // Get values from other input fields similarly
+
+        const table = document.getElementById('table');
+        const rows = table.getElementsByTagName('tr');
+
+        // Loop through all table rows, hide those that don't match the filter
+        for (let i = 1; i < rows.length; i++) {
+            const dateCol = rows[i].getElementsByTagName('td')[0];
+            const merchantCol = rows[i].getElementsByTagName('td')[1];
+            // Get values from other columns similarly
+        
+            if (dateCol && merchantCol // && other columns //) {
+                const txtValueDate = dateCol.textContent || dateCol.innerText;
+                const txtValueMerchant = merchantCol.textContent || merchantCol.innerText;
+                // Get text values from other columns similarly
+
+                // Show/hide rows based on filter conditions
+                rows[i].style.display = (
+                    txtValueDate.toUpperCase().indexOf(filterValueDate) > -1 &&
+                    txtValueMerchant.toUpperCase().indexOf(filterValueMerchant) > -1
+                    // Add conditions for other columns similarly
+                ) ? '' : 'none';
+            }
+        }
+    }
+</script>        
+**/
