@@ -486,7 +486,7 @@ th{
     .sidebar:hover {
         width: 50px;
         transition: none;
-        padding: 2rem 0.5rem;
+        padding: 0;
     }
 
     span{
