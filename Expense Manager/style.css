@@ -526,6 +526,10 @@ th{
         font-size: 15px;
         align-items: flex-start;
     }
+
+    .menu li.active{
+        background: #e0e0e058;
+    }
 }
 
 @media (max-width: 477px) {
@@ -544,5 +548,9 @@ th{
 
     .floating-profile {
         width: 400px;
+    }
+
+    .menu li.active{
+        background: #e0e0e058;
     }
 }
