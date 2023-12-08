@@ -530,12 +530,12 @@ th{
 
 @media (max-width: 477px) {
     .sidebar {
-        height: 120vh;
+        height: 100vh;
     }
 
     .tabular--wrapper {
-        top: 35%;
-        height: 700px;
+        top: 32%;
+        height: 550px;
     }
 
     .table--head{
