@@ -10,18 +10,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css"
     />
   </head>
-  <body class="login-page">
+  <body id="login-page">
     <div class="login-container">
-      <button class="signin"><i class="fa-regular fa-user"></i></button>
       <div class="login-head"><span>Log In</span></div>
+      <button class="signin"><i class="fa-regular fa-user"></i></button>
       <div class="login-box">
-        <label for="userId">User ID</label>
-        <input type="text" placeholder="Enter ID">
+        <div>
+          <label for="userId">User ID</label>
+          <input type="text" placeholder="Enter ID">
+        </div>
 
-        <label for="password">Password</label>
-        <input type="text" placeholder="Enter Password">
+        <div>
+          <label for="password">Password</label>
+          <input type="text" placeholder="Enter Password">
+        </div>
 
-        <a href="homepage.html"><button>Sign In</button></a>
+        <a href="homepage.html"><button class="sign">Sign In</button></a>
       </div>
       <div class="end">
         <p>Not a member? <a href="#">Create account</a></p>
