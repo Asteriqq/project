@@ -63,6 +63,30 @@ body{
     border-radius: 10px;
 }
 
+.tooltip-btn {
+    position: relative;
+}
+
+.tooltip-btn::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+  
+.tooltip-btn:hover::before {
+    opacity: 1;
+}
+
 .add{
     bottom: 5;
     display: flex;
@@ -289,9 +313,10 @@ th{
 /**Log In**/
 #login-page{
     background: linear-gradient(to bottom, rgb(63, 151, 233), rgb(21, 86, 146), rgb(36, 57, 91));
-    margin-top: 9%;
-    margin-bottom: 8.5%;
-    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
 }
 
 .login-box{
